@@ -1,0 +1,19 @@
+{
+    "version": "1",
+    "projects": [
+      {
+        "name": "my_django_project", 
+        "path": "./", 
+        "deploy_path": "/home/myuser/my_django_project", 
+        "wsgi_file": "my_django_project/wsgi.py", 
+        "requirements_path": "requirements.txt", 
+        "virtualenv_path": "/home/myuser/venv", 
+        "collectstatic": true, 
+        "local_settings": "local_settings.py", 
+        "manage_py": "manage.py", 
+        "gunicorn_config": "gunicorn_config.py", 
+        "static_root": "staticfiles", 
+        "media_root": "media" 
+      }
+    ]
+  }
