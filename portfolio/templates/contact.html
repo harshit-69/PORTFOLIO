@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact 
+{% endblock title %}
+
+{% block body %}
+<style>
+    body {
+        background-color: rgb(7, 7, 81); /* Apply background color to the whole page */
+        color: white; /* Set text color */
+        margin: 0; /* Remove default margin */
+        font-family: Arial, sans-serif; /* Use a clean font */
+    }
+    .container {
+        min-height: 100vh; /* Ensure container fills the viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .banner {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .banner img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .banner h1 {
+        color: rgb(161, 83, 235);
+        margin: 20px 0;
+    }
+    .banner p {
+        font-size: 1.2rem;
+    }
+    .contact-form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .form-container {
+        width: 60%;
+        background-color: rgb(11, 11, 99);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .form-container h2 {
+        text-align: center;
+        color: rgb(161, 83, 235);
+        margin-bottom: 20px;
+    }
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .form-container input,
+    .form-container textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+    .form-container button {
+        padding: 10px 20px;
+        background-color: rgb(161, 83, 235);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .contact-info {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .contact-info h2 {
+        color: rgb(161, 83, 235);
+    }
+    .contact-info address {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    .contact-info a {
+        color: rgb(161, 83, 235);
+        text-decoration: none;
+    }
+    footer {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="container">
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png" 
+            alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>
+          We're here to answer any questions you may have.
+        </p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>Your Details</h2>
+            <form method="POST" action="/contact">
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <address>
+            Chandigarh, 160030<br>
+            Phone: <a href="tel:1234567890">7652812581</a><br>
+            Email: <a href="mailto:info@example.com">harshitchand37@gmail.com</a>
+        </address>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+</div>
+{% endblock body %}

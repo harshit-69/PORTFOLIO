@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+Power BI Project
+{% endblock title %}
+
+{% block body %}
+<div style="background-color: darkblue; color: white; padding: 20px; font-family: Arial, sans-serif;">
+    <h1 style="text-align: center; margin-bottom: 30px;">Power BI Project - Overview</h1>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="/static/images/po.png" alt="Power BI Project Screenshot" style="max-width: 60%; height: auto; border: 2px solid white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+    </div>
+
+    <div style="margin-top: 20px; text-align: center;">
+        <p style="font-size: 1.2em; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+            This section showcases a detailed Power BI project, providing insights and analytics through dynamic dashboards. 
+            Explore the visualizations and reports designed to make data-driven decisions easier and more efficient.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="/static/report.pdf" download style="
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        " onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.transform='scale(1)';">
+            Download PDF Report
+        </a>
+    </div>
+</div>
+{% endblock body %}

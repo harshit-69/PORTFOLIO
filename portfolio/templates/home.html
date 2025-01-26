@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock title %}
+{% block color %}
+{% endblock color %}
+
+{% block body %}
+<style>
+    *{
+        margin: 0;
+        padding: 0 ;
+    }
+    
+            body{
+                background-color: rgb(7, 7, 81);
+                color:white;
+    
+            }
+            .firstSection{
+                display:flex ;
+                justify-content: space-around;
+                margin:40px 0;
+                align-items:center;
+            }
+            .firstSection > div{
+                width:30%;
+                
+            }
+            .leftSection{
+                
+                font-size: 3rem;
+                
+                
+            }
+            .purple{
+                color: rgb(161, 83, 235);
+            }
+        </style>
+    
+    </head>
+    <body>
+        <main>
+            <section class="firstSection">
+                <div class="leftSection">Hi, My name is <span class="purple">Harshit</span>
+                    <span id="element"></span>
+                    <br>
+                    <a href="/static/resume/Resume.pdf" class="download-btn" download>
+                        <button style="
+                            margin-top: 20px;
+                            padding: 10px 20px;
+                            background-color: rgb(161, 83, 235);
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            font-size: 1rem;
+                            cursor: pointer;
+                        ">Download Resume</button>
+                    </a>
+                </div>
+                <div class="rightSection">
+                    <img src="/static/images/bg.png" alt style="
+                        width: 80%;
+                        margin:50px 0;
+                        "> 
+                </div>
+            </section>
+        </main>
+        
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+              strings: ['Welcome to my Portfolio Website'],
+              typeSpeed: 50,
+            });
+          </script>
+    </body>
+    
+
+
+{% endblock body %}
+
