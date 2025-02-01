@@ -33,14 +33,14 @@ ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
-    'app.apps.AppConfig',
+    'app.apps.MyAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    
 ]
 
 MIDDLEWARE = [
